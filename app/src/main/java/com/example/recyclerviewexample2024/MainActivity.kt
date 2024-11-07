@@ -1,5 +1,7 @@
 package com.example.recyclerviewexample2024
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -27,16 +29,13 @@ class MainActivity : AppCompatActivity() {
         val manager = LinearLayoutManager(this)
         val decoration = DividerItemDecoration(this, manager.orientation)
         binding.recyclerSuperHero.layoutManager = manager
-        binding.recyclerSuperHero.adapter =
-            SuperHeroAdapter(SuperHeroProvider.superHeroList) { superHero ->
-                onItemSelected(
-                    superHero
-                )
-            }
+        binding.recyclerSuperHero.adapter = SuperHeroAdapter(SuperHeroProvider.superHeroList) { superHero -> onItemSelected(superHero) }
         binding.recyclerSuperHero.addItemDecoration(decoration)
     }
 
     fun onItemSelected(superHero: SuperHero) {
         Toast.makeText(this, superHero.superhero, Toast.LENGTH_SHORT).show()
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(superHero.photo))
+        startActivity(intent)
     }
 }
