@@ -48,6 +48,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     //implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.github.glide)
+    // implementation ("com.squareup.picasso:picasso:2.8")
+    implementation (libs.picasso)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
