@@ -1,11 +1,7 @@
 package com.example.recyclerviewexample2024.adapter
 
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.recyclerviewexample2024.R
 import com.example.recyclerviewexample2024.SuperHero
 import com.example.recyclerviewexample2024.databinding.ItemSuperheroBinding
 import com.squareup.picasso.Picasso
@@ -13,7 +9,11 @@ import com.squareup.picasso.Picasso
 class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val binding = ItemSuperheroBinding.bind(view)
 
-    fun render(superHeroModel: SuperHero, onClickListener: (SuperHero) -> Unit) {
+    fun render(
+        superHeroModel: SuperHero,
+        onClickListener: (SuperHero) -> Unit,
+        onClickDelete: (Int) -> Unit
+    ) {
         binding.tvSuperHeroName.text = superHeroModel.superhero
         binding.tvRealName.text = superHeroModel.realName
         binding.tvPublisher.text = superHeroModel.publisher
@@ -22,5 +22,6 @@ class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.setOnClickListener {
             onClickListener(superHeroModel)
         }
+        binding.btnDelete.setOnClickListener { onClickDelete(adapterPosition) }
     }
 }
