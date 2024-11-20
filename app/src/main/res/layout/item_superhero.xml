@@ -56,6 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:backgroundTint="@color/red"
+            android:textColor="@color/white"
             tools:text="BORRAR :("
             app:layout_constraintStart_toEndOf="@+id/ivSuperHero" />
 
