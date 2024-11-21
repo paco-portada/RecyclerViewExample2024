@@ -7,8 +7,8 @@ class SuperHeroProvider {
                 "KotlinMan",
                 "Jetbrains",
                 "AristiDevs",
-                //"https://cursokotlin.com/wp-content/uploads/2020/09/Webp.net-compress-image.jpg"
-                photo = "https://dam.org.es/ficheros/campesina.jpg"
+                "https://cursokotlin.com/wp-content/uploads/2020/09/Webp.net-compress-image.jpg"
+                // photo = "https://dam.org.es/ficheros/campesina.jpg"
             ),
             SuperHero(
                 "Spiderman",
